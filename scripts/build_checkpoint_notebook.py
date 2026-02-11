@@ -252,6 +252,29 @@ score_df
 
     cells.append(
         md(
+            """### Why GRBench Clearly Aligns with Course Content
+To make course alignment explicit (not implicit), I map GRBench to concrete in-course tasks:
+
+1. **Text Mining (Course)**  
+   - Data support: `question` and `answer` text fields.  
+   - Concrete analyses: token/length distributions, lexical patterns, embedding-based question similarity.
+
+2. **Graph Mining / Graph Reasoning (Course)**  
+   - Task support: GRBench questions are designed for multi-hop reasoning over external textual graphs.  
+   - Concrete analyses: difficulty-aware reasoning depth analysis (easy/medium/hard), domain-level transfer behavior.
+
+3. **Clustering / Structure Discovery (Course, if covered)**  
+   - Data support: question text and derived embeddings.  
+   - Concrete analyses: cluster question templates/intents and compare cluster-level error or difficulty patterns.
+
+4. **Beyond-Course Technique (Required Extra)**  
+   - Graph-aware RL for tool-using LLM trajectories (policy optimization over reasoning-action loops).
+"""
+        )
+    )
+
+    cells.append(
+        md(
             """## (D) Exploratory Data Analysis (Selected Dataset Only: GRBench)
 
 **Algorithmic decision:** parse JSONL directly (not schema inference tools) to keep preprocessing deterministic and auditable.

@@ -23,6 +23,13 @@ This folder contains a full submission-ready implementation for Checkpoint 1:
 
 **GRBench** is selected for this checkpoint because it most directly supports the graph-reasoning project direction while still covering course topics and enabling beyond-course techniques (graph-aware RL for tool-using LLM trajectories).
 
+## Explicit Course Alignment for GRBench
+
+- Text mining (course): questions/answers support lexical and embedding-based analyses.
+- Graph reasoning/mining (course): benchmark is built around multi-hop reasoning over textual graphs, with difficulty labels for structured analysis.
+- Clustering (course, if covered): question embeddings can be clustered to analyze intent families and difficulty patterns.
+- Beyond-course method: graph-aware RL for tool-use trajectory optimization.
+
 ## Repository Structure
 
 - `notebooks/checkpoint1_dataset_selection.ipynb` - fully runnable notebook submission
