@@ -1,0 +1,41 @@
+{
+  "grbench": {
+    "total_samples": 1740,
+    "domains": 10,
+    "domain_counts": {
+      "amazon": 200,
+      "biology": 140,
+      "chemistry": 140,
+      "computer_science": 150,
+      "healthcare": 270,
+      "legal": 180,
+      "literature": 240,
+      "materials_science": 140,
+      "medicine": 140,
+      "physics": 140
+    },
+    "level_counts": {
+      "easy": 700,
+      "hard": 120,
+      "medium": 920
+    },
+    "columns": [
+      "domain",
+      "qid",
+      "question",
+      "answer",
+      "level"
+    ],
+    "avg_question_words": 30.68793103448276,
+    "avg_answer_words": 5.756896551724138
+  },
+  "ogbn_arxiv": {
+    "nodes": 169343,
+    "edges": 1166243,
+    "feature_dim": 128
+  },
+  "snap_com_amazon": {
+    "nodes": 334863,
+    "edges": 925872
+  }
+}

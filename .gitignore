@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# Keep scripts and logs, but do not version large raw datasets
+data/raw/
+
+.DS_Store
