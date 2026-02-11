@@ -25,7 +25,7 @@ def main() -> None:
         md(
             f"""# Course Project Checkpoint 1: Dataset Selection and EDA (GraphDancer Track)
 
-**Student:** Leopold  
+**Student:** [Your Name]  
 **Date:** {date.today().isoformat()}  
 **Checkpoint scope:** dataset identification, comparative analysis, dataset selection, EDA, initial insights, GitHub portfolio setup.
 
@@ -55,7 +55,6 @@ from pathlib import Path
 import json
 import gzip
 import re
-import subprocess
 from collections import Counter
 
 import numpy as np
@@ -80,8 +79,7 @@ REPORT_ROOT = PROJECT_ROOT / "reports"
 FIG_ROOT = REPORT_ROOT / "figures"
 FIG_ROOT.mkdir(parents=True, exist_ok=True)
 
-print(f"Project root: {PROJECT_ROOT}")
-print(f"Data root: {DATA_ROOT}")
+print("Environment ready. Data and report directories resolved.")
 """
         )
     )
@@ -257,6 +255,17 @@ score_df
             """## (D) Exploratory Data Analysis (Selected Dataset Only: GRBench)
 
 **Algorithmic decision:** parse JSONL directly (not schema inference tools) to keep preprocessing deterministic and auditable.
+"""
+        )
+    )
+
+    cells.append(
+        md(
+            """### Data Collection and Provenance (for EDA)
+- Data source: Hugging Face dataset `PeterJinGo/GRBench`.
+- Collection process for this project: scripted download via `scripts/download_datasets.py` from official dataset listing/API.
+- Provenance record: `reports/dataset_download_log.json` includes source URLs, file sizes, and SHA256 checksums.
+- Why this approach: transparent and reproducible local collection; no manual copy-paste steps.
 """
         )
     )
@@ -506,7 +515,7 @@ bias_report
         md(
             """## (F) GitHub Portfolio Building
 
-- Public repository (to submit): `REPLACE_WITH_PUBLIC_GITHUB_LINK`
+- Public repository (to submit): `Pending publication (run gh auth login, then gh repo create ... --public --push)`
 - First notebook: `notebooks/checkpoint1_graphdancer.ipynb`
 - Supporting artifacts:
   - `scripts/download_datasets.py`
@@ -519,18 +528,6 @@ bias_report
 - Candidate datasets + final selection rationale.
 - Reproducible setup steps.
 - Results snapshot and next checkpoint plan.
-"""
-        )
-    )
-
-    cells.append(
-        code(
-            """# Optional helper: print git remotes so the final report can include the public GitHub URL.
-try:
-    remotes = subprocess.check_output(["git", "remote", "-v"], cwd=PROJECT_ROOT, text=True)
-    print(remotes if remotes.strip() else "No git remotes configured yet.")
-except Exception as exc:
-    print(f"Could not read git remotes: {exc}")
 """
         )
     )

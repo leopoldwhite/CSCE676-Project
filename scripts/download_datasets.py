@@ -27,6 +27,15 @@ OGBN_ARXIV_URL = "https://snap.stanford.edu/ogb/data/nodeproppred/arxiv.zip"
 SNAP_AMAZON_URL = "https://snap.stanford.edu/data/bigdata/communities/com-amazon.ungraph.txt.gz"
 
 
+def safe_relpath(path: Path, project_root: Path) -> str:
+    """Return project-relative path when possible, absolute as fallback."""
+    resolved = path.resolve()
+    try:
+        return str(resolved.relative_to(project_root))
+    except ValueError:
+        return str(resolved)
+
+
 def sha256sum(path: Path) -> str:
     h = hashlib.sha256()
     with path.open("rb") as f:
@@ -41,7 +50,7 @@ def download_file(url: str, out_path: Path) -> None:
         shutil.copyfileobj(resp, out)
 
 
-def download_grbench(root: Path, log: dict) -> None:
+def download_grbench(root: Path, log: dict, project_root: Path) -> None:
     gr_dir = root / "grbench"
     gr_dir.mkdir(parents=True, exist_ok=True)
 
@@ -58,7 +67,7 @@ def download_grbench(root: Path, log: dict) -> None:
         download_file(url, out)
         downloaded.append(
             {
-                "path": str(out),
+                "path": safe_relpath(out, project_root),
                 "bytes": out.stat().st_size,
                 "sha256": sha256sum(out),
             }
@@ -70,7 +79,7 @@ def download_grbench(root: Path, log: dict) -> None:
     }
 
 
-def download_ogbn_arxiv(root: Path, log: dict) -> None:
+def download_ogbn_arxiv(root: Path, log: dict, project_root: Path) -> None:
     ogb_dir = root / "ogbn_arxiv"
     ogb_dir.mkdir(parents=True, exist_ok=True)
 
@@ -88,15 +97,15 @@ def download_ogbn_arxiv(root: Path, log: dict) -> None:
     log["ogbn_arxiv"] = {
         "source": OGBN_ARXIV_URL,
         "zip": {
-            "path": str(zip_path),
+            "path": safe_relpath(zip_path, project_root),
             "bytes": zip_path.stat().st_size,
             "sha256": sha256sum(zip_path),
         },
-        "extracted_root": str(extract_dir),
+        "extracted_root": safe_relpath(extract_dir, project_root),
     }
 
 
-def download_snap_amazon(root: Path, log: dict) -> None:
+def download_snap_amazon(root: Path, log: dict, project_root: Path) -> None:
     snap_dir = root / "snap_com_amazon"
     snap_dir.mkdir(parents=True, exist_ok=True)
 
@@ -111,12 +120,12 @@ def download_snap_amazon(root: Path, log: dict) -> None:
     log["snap_com_amazon"] = {
         "source": SNAP_AMAZON_URL,
         "gz": {
-            "path": str(gz_path),
+            "path": safe_relpath(gz_path, project_root),
             "bytes": gz_path.stat().st_size,
             "sha256": sha256sum(gz_path),
         },
         "txt": {
-            "path": str(txt_path),
+            "path": safe_relpath(txt_path, project_root),
             "bytes": txt_path.stat().st_size,
             "sha256": sha256sum(txt_path),
         },
@@ -139,17 +148,18 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    data_root = args.data_root.resolve()
-    log_path = args.log_path.resolve()
+    project_root = Path.cwd().resolve()
+    data_root = (project_root / args.data_root).resolve() if not args.data_root.is_absolute() else args.data_root.resolve()
+    log_path = (project_root / args.log_path).resolve() if not args.log_path.is_absolute() else args.log_path.resolve()
 
     log: dict[str, object] = {
-        "data_root": str(data_root),
+        "data_root": safe_relpath(data_root, project_root),
     }
 
     try:
-        download_grbench(data_root, log)
-        download_ogbn_arxiv(data_root, log)
-        download_snap_amazon(data_root, log)
+        download_grbench(data_root, log, project_root)
+        download_ogbn_arxiv(data_root, log, project_root)
+        download_snap_amazon(data_root, log, project_root)
     except urllib.error.URLError as exc:
         print(f"Download failed: {exc}", file=sys.stderr)
         return 1

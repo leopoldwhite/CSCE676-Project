@@ -1,60 +1,60 @@
 {
-  "data_root": "/Users/leopold/Documents/GraphDancerSlides/course_project_checkpoint1/data/raw",
+  "data_root": "data/raw",
   "grbench": {
     "source": "https://huggingface.co/datasets/PeterJinGo/GRBench/resolve/main",
     "files": [
       {
-        "path": "/Users/leopold/Documents/GraphDancerSlides/course_project_checkpoint1/data/raw/grbench/amazon.json",
+        "path": "data/raw/grbench/amazon.json",
         "bytes": 52053,
         "sha256": "df3c9eb3e4d2f9cfbed6634e1bf081888a20d997ce4c68948a972f167c999f85"
       },
       {
-        "path": "/Users/leopold/Documents/GraphDancerSlides/course_project_checkpoint1/data/raw/grbench/biology.json",
+        "path": "data/raw/grbench/biology.json",
         "bytes": 42257,
         "sha256": "4034610224ffd34e379c245cfe110e80933069ecc7cb765695b9e1d89758b03d"
       },
       {
-        "path": "/Users/leopold/Documents/GraphDancerSlides/course_project_checkpoint1/data/raw/grbench/chemistry.json",
+        "path": "data/raw/grbench/chemistry.json",
         "bytes": 41508,
         "sha256": "7901dedf9cf2673888c1c1831e37827fed4dee52188b3fe356144886673ee738"
       },
       {
-        "path": "/Users/leopold/Documents/GraphDancerSlides/course_project_checkpoint1/data/raw/grbench/computer_science.json",
+        "path": "data/raw/grbench/computer_science.json",
         "bytes": 37865,
         "sha256": "4a0930a177330ace76bf7ead3e1c30f9395dd79ffe2baf229a33464d05d68218"
       },
       {
-        "path": "/Users/leopold/Documents/GraphDancerSlides/course_project_checkpoint1/data/raw/grbench/healthcare.json",
+        "path": "data/raw/grbench/healthcare.json",
         "bytes": 44895,
         "sha256": "919cd2b17a7eaee83874b7bf7bc211f083257af5e92d6ff5742ccfde8a9546f2"
       },
       {
-        "path": "/Users/leopold/Documents/GraphDancerSlides/course_project_checkpoint1/data/raw/grbench/legal.json",
+        "path": "data/raw/grbench/legal.json",
         "bytes": 104288,
         "sha256": "e6d865c6016996859b5e6a65366c2ae16ee063840efb8f6b96fc9798b90dcf06"
       },
       {
-        "path": "/Users/leopold/Documents/GraphDancerSlides/course_project_checkpoint1/data/raw/grbench/literature.json",
+        "path": "data/raw/grbench/literature.json",
         "bytes": 54155,
         "sha256": "d1ad6a7c5e28698ff112d1e10c6ddf1f67296a05decadd2a3ad99a6c7bce1182"
       },
       {
-        "path": "/Users/leopold/Documents/GraphDancerSlides/course_project_checkpoint1/data/raw/grbench/materials_science.json",
+        "path": "data/raw/grbench/materials_science.json",
         "bytes": 39907,
         "sha256": "4e643fc55d417b8af89a0390e7e7766a254e5cb599af6f9b46049b169e0a6725"
       },
       {
-        "path": "/Users/leopold/Documents/GraphDancerSlides/course_project_checkpoint1/data/raw/grbench/medicine.json",
+        "path": "data/raw/grbench/medicine.json",
         "bytes": 40615,
         "sha256": "918a7f945b54faf56efd6010c48ee759598e1ef7023b68e7e4c1cb439a2be436"
       },
       {
-        "path": "/Users/leopold/Documents/GraphDancerSlides/course_project_checkpoint1/data/raw/grbench/physics.json",
+        "path": "data/raw/grbench/physics.json",
         "bytes": 36043,
         "sha256": "c5573f2a4866cb1c077576d33f95216b6dfea3836290ca648d79644e1714933e"
       },
       {
-        "path": "/Users/leopold/Documents/GraphDancerSlides/course_project_checkpoint1/data/raw/grbench/README.md",
+        "path": "data/raw/grbench/README.md",
         "bytes": 4702,
         "sha256": "3f74de809f791cbd0ddf85175f9f9e39bc9f609fcdffdd19d6ec19e3a99bae7f"
       }
@@ -63,21 +63,21 @@
   "ogbn_arxiv": {
     "source": "https://snap.stanford.edu/ogb/data/nodeproppred/arxiv.zip",
     "zip": {
-      "path": "/Users/leopold/Documents/GraphDancerSlides/course_project_checkpoint1/data/raw/ogbn_arxiv/arxiv.zip",
+      "path": "data/raw/ogbn_arxiv/arxiv.zip",
       "bytes": 83058288,
       "sha256": "49f85c801589ecdcc52cfaca99693aaea7b8af16a9ac3f41dd85a5f3193fe276"
     },
-    "extracted_root": "/Users/leopold/Documents/GraphDancerSlides/course_project_checkpoint1/data/raw/ogbn_arxiv/arxiv"
+    "extracted_root": "data/raw/ogbn_arxiv/arxiv"
   },
   "snap_com_amazon": {
     "source": "https://snap.stanford.edu/data/bigdata/communities/com-amazon.ungraph.txt.gz",
     "gz": {
-      "path": "/Users/leopold/Documents/GraphDancerSlides/course_project_checkpoint1/data/raw/snap_com_amazon/com-amazon.ungraph.txt.gz",
+      "path": "data/raw/snap_com_amazon/com-amazon.ungraph.txt.gz",
       "bytes": 4501435,
       "sha256": "bb4b9fcf549c9174049e885e9a0a4057c9724846e7297c4a1ea299b8e92eec34"
     },
     "txt": {
-      "path": "/Users/leopold/Documents/GraphDancerSlides/course_project_checkpoint1/data/raw/snap_com_amazon/com-amazon.ungraph.txt",
+      "path": "data/raw/snap_com_amazon/com-amazon.ungraph.txt",
       "bytes": 12585884,
       "sha256": "9c403688d01417ca452910947a7000bcd61965fc583f4afe57eb209c8b057b7a"
     }

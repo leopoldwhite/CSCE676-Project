@@ -36,7 +36,7 @@ This folder contains a full submission-ready implementation for Checkpoint 1:
 ## Quickstart
 
 ```bash
-cd /Users/leopold/Documents/GraphDancerSlides/course_project_checkpoint1
+cd course_project_checkpoint1
 uv venv .venv
 uv pip install --python .venv/bin/python pandas matplotlib seaborn jupyter nbformat nbclient
 python3 scripts/download_datasets.py --data-root data/raw --log-path reports/dataset_download_log.json
@@ -52,6 +52,5 @@ python3 scripts/download_datasets.py --data-root data/raw --log-path reports/dat
 
 ## GitHub Portfolio
 
-- Public repository URL: `REPLACE_WITH_PUBLIC_GITHUB_LINK`
+- Public repository URL: `Pending publication (requires gh auth login)`
 - First notebook to highlight in portfolio: `notebooks/checkpoint1_graphdancer.ipynb`
-
