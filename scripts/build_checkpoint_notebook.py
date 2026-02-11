@@ -23,14 +23,14 @@ def main() -> None:
 
     cells.append(
         md(
-            f"""# Course Project Checkpoint 1: Dataset Selection and EDA (GraphDancer Track)
+            f"""# Course Project Checkpoint 1: Dataset Selection and EDA
 
 **Student:** [Your Name]  
 **Date:** {date.today().isoformat()}  
 **Checkpoint scope:** dataset identification, comparative analysis, dataset selection, EDA, initial insights, GitHub portfolio setup.
 
 ## Why this notebook exists
-I want to turn my GraphDancer paper direction into the semester project. This notebook completes the first checkpoint end-to-end and documents every major algorithmic choice with explicit rationale.
+I want to turn my graph-reasoning research direction into the semester project. This notebook completes the first checkpoint end-to-end and documents every major algorithmic choice with explicit rationale.
 """
         )
     )
@@ -144,7 +144,7 @@ candidate_df
     cells.append(
         md(
             """### Candidate Summary Notes
-- **GRBench** is the strongest conceptual bridge from my GraphDancer paper to the class project.
+- **GRBench** is the strongest conceptual bridge from my graph-reasoning focus to the class project.
 - **ogbn-arxiv** is a robust fallback with mature baselines and reproducible splits.
 - **com-Amazon** is computationally feasible while still large enough for realistic graph mining constraints.
 """
@@ -202,7 +202,7 @@ comparison_df
 **Decision rationale:** use a lightweight weighted score for transparency, then confirm with qualitative trade-off analysis.
 
 Scoring criteria:
-- GraphDancer fit (weight 0.35)
+- Project-fit to my research direction (weight 0.35)
 - Course-technique coverage (0.20)
 - Beyond-course novelty (0.25)
 - Data access + reproducibility for this semester (0.20)
@@ -213,7 +213,7 @@ Scoring criteria:
     cells.append(
         code(
             """weights = {
-    "graphdancer_fit": 0.35,
+    "project_fit": 0.35,
     "course_coverage": 0.20,
     "beyond_novelty": 0.25,
     "reproducibility": 0.20,
@@ -221,9 +221,9 @@ Scoring criteria:
 
 # Scores are 1-5 and intentionally conservative.
 score_rows = [
-    {"Dataset": "GRBench", "graphdancer_fit": 5, "course_coverage": 4, "beyond_novelty": 5, "reproducibility": 4},
-    {"Dataset": "ogbn-arxiv", "graphdancer_fit": 3, "course_coverage": 5, "beyond_novelty": 4, "reproducibility": 5},
-    {"Dataset": "SNAP com-Amazon", "graphdancer_fit": 3, "course_coverage": 4, "beyond_novelty": 4, "reproducibility": 5},
+    {"Dataset": "GRBench", "project_fit": 5, "course_coverage": 4, "beyond_novelty": 5, "reproducibility": 4},
+    {"Dataset": "ogbn-arxiv", "project_fit": 3, "course_coverage": 5, "beyond_novelty": 4, "reproducibility": 5},
+    {"Dataset": "SNAP com-Amazon", "project_fit": 3, "course_coverage": 4, "beyond_novelty": 4, "reproducibility": 5},
 ]
 score_df = pd.DataFrame(score_rows)
 score_df["weighted_score"] = sum(score_df[c] * w for c, w in weights.items())
@@ -238,7 +238,7 @@ score_df
             """### Selected Dataset: **GRBench**
 
 **Why selected:**
-- Direct continuity with my GraphDancer research direction.
+- Direct continuity with my graph-reasoning research direction.
 - Naturally supports course graph/text mining themes.
 - Enables at least one clearly beyond-course method: graph-aware RL for multi-round tool-use trajectories.
 
@@ -516,7 +516,7 @@ bias_report
             """## (F) GitHub Portfolio Building
 
 - Public repository (to submit): `Pending publication (run gh auth login, then gh repo create ... --public --push)`
-- First notebook: `notebooks/checkpoint1_graphdancer.ipynb`
+- First notebook: `notebooks/checkpoint1_dataset_selection.ipynb`
 - Supporting artifacts:
   - `scripts/download_datasets.py`
   - `reports/dataset_download_log.json`
@@ -552,7 +552,7 @@ bias_report
 
 ### (4) Citations for Papers Used
 - Jin, Y., et al. (2024). *Graph Chain-of-Thought: Augmenting Large Language Models by Reasoning on Graphs*.  
-- Bai, Y., et al. (2026). *GraphDancer: A Graph-Aware Curriculum for Reinforcement Fine-Tuning in Graph-Augmented Reasoning*.  
+- Bai, Y., et al. (2026). *A Graph-Aware Curriculum for Reinforcement Fine-Tuning in Graph-Augmented Reasoning*.  
 - Hu, W., et al. (2020). *Open Graph Benchmark: Datasets for Machine Learning on Graphs*.
 """
         )
@@ -571,7 +571,7 @@ bias_report
         },
     }
 
-    out = Path("notebooks/checkpoint1_graphdancer.ipynb")
+    out = Path("notebooks/checkpoint1_dataset_selection.ipynb")
     out.parent.mkdir(parents=True, exist_ok=True)
     nbf.write(nb, out)
     print(f"Wrote {out.resolve()}")
