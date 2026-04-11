@@ -1,12 +1,24 @@
-# Course Project - Checkpoint 1
+# CSCE 676 Course Project — Graph-Augmented Reasoning with GRBench
 
-This folder contains a full submission-ready implementation for Checkpoint 1:
+This repository contains the semester project for CSCE 676 (Data Mining and Analysis, Spring 2026). The project investigates text mining, graph mining, and graph-aware reinforcement learning on the GRBench benchmark.
+
+## Checkpoints
+
+### Checkpoint 1: Dataset Selection and EDA
 - (A) Candidate dataset identification (3 datasets, including GRBench)
 - (B) Comparative analysis table with required dimensions
 - (C) Final dataset selection + trade-offs
 - (D) EDA on selected dataset (GRBench)
 - (E) Initial insights + research questions
 - (F) GitHub portfolio setup artifacts
+
+### Checkpoint 2: Research Question Formation
+- Project scope recap with EDA findings
+- Three research questions with method mapping (2 course + 1 external)
+- Additional EDA: UMAP embeddings, keyword co-occurrence graphs, reasoning complexity
+- Initial method runs: K-Means/DBSCAN clustering, Louvain community detection, centrality analysis, difficulty classification baseline
+- Motivation and feasibility analysis for each RQ
+- Methodological planning with timeline
 
 ## Candidate Datasets
 
@@ -30,15 +42,19 @@ This folder contains a full submission-ready implementation for Checkpoint 1:
 - Clustering (course, if covered): question embeddings can be clustered to analyze intent families and difficulty patterns.
 - Beyond-course method: graph-aware RL for tool-use trajectory optimization.
 
+## Research Questions
+
+1. **RQ1 (Course — Text Mining + Clustering):** Can text embeddings and unsupervised clustering reveal latent question types that predict difficulty level better than domain labels alone?
+2. **RQ2 (Course — Graph Mining):** What structural properties of keyword co-occurrence graphs differentiate domains, and do graph centrality measures correlate with question difficulty?
+3. **RQ3 (External — Graph-Aware RL):** Can graph-aware reinforcement learning improve multi-hop reasoning trajectories on GRBench compared to prompting-only baselines?
+
 ## Repository Structure
 
-- `notebooks/checkpoint1_dataset_selection.ipynb` - fully runnable notebook submission
-- `scripts/download_datasets.py` - one-command dataset downloader
-- `scripts/build_checkpoint_notebook.py` - notebook generator
-- `reports/dataset_download_log.json` - download metadata and checksums
-- `reports/dataset_profiles.json` - parsed dataset size/shape summary
-- `reports/figures/` - EDA figures produced by notebook execution
-- `data/raw/` - downloaded raw datasets (local use)
+- `notebooks/checkpoint1_dataset_selection.ipynb` — Checkpoint 1 notebook
+- `notebooks/checkpoint2_rq_formation.ipynb` — Checkpoint 2 notebook
+- `scripts/download_datasets.py` — one-command dataset downloader
+- `reports/figures/` — EDA and analysis figures
+- `data/raw/` — downloaded raw datasets (local use, not committed)
 
 ## Quickstart
 
