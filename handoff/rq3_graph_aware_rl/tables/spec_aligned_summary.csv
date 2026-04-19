@@ -1,0 +1,15 @@
+role,model,em_biomedical,rougeL_biomedical,em_goodreads,rougeL_goodreads,em_amazon,rougeL_amazon,em_legal,rougeL_legal,avg_em_ood
+zero_shot_qwen25_3b,qwen25_3b-instruct-baseline,0.2481,0.2747,0.3875,0.436,0.37,0.4358,0.2222,0.3068,0.307
+zero_shot_qwen25_3b_new_prompt,Qwen25-3B-Instruct-new,0.2222,0.2595,0.3792,0.4284,0.355,0.4282,0.2722,0.3364,0.3072
+prompt_ref_gpt4o_mini_v0,gpt-4o-mini-v0,0.3444,0.3864,0.1958,0.2256,0.095,0.1264,0.1389,0.229,0.1935
+prompt_ref_gpt4o_mini_v1,gpt-4o-mini-v1,0.3444,0.3682,0.225,0.2546,0.1217,0.1536,0.1167,0.2198,0.202
+prompt_ref_gpt5_mini,gpt-5-mini,0.3593,0.4177,0.3292,0.4229,0.275,0.3739,0.3333,0.497,0.3242
+prompt_ref_qwen3_8b,Qwen3-8B,0.3333,0.3415,0.475,0.5005,0.43,0.4567,0.4556,0.5173,0.4235
+prompt_ref_qwen3_14b,Qwen3-14B,0.3667,0.3882,0.4292,0.4803,0.37,0.3991,0.2722,0.3266,0.3595
+vanilla_rl_uniform_old,old-server-vanilla,0.2519,0.289,0.4167,0.4694,0.38,0.4323,0.3,0.3849,0.3371
+curriculum_rl_old,old-server-old-curriculum,0.3,0.3619,0.45,0.4902,0.395,0.493,0.25,0.3693,0.3488
+vanilla_rl_uniform_new,ppo-format-vanilla,0.2259,0.2709,0.4333,0.4736,0.41,0.4566,0.2722,0.3384,0.3354
+vanilla_rl_uniform_new_150,curriculum_rl-grpo-150steps,0.2407,0.2928,0.3833,0.4234,0.37,0.4353,0.2278,0.3036,0.3055
+curriculum_rl_new_oldenv,ppo-format-e2h_gaussian_beta_0.75_sigma_0.75-oldCurriculum-originalEnv-200steps,0.2185,0.2731,0.4167,0.4547,0.385,0.4482,0.2889,0.4271,0.3273
+curriculum_rl_new_mix,ppo-format-e2h_gaussian_mix_newCurriculum_200steps-v3-t2,0.2741,0.3155,0.3875,0.4382,0.425,0.4887,0.2889,0.3825,0.3439
+curriculum_rl_hf_published,curriculum_rl-grpo-curriculum-200steps,0.1741,0.1987,0.3333,0.3942,0.375,0.4386,0.1889,0.2399,0.2678

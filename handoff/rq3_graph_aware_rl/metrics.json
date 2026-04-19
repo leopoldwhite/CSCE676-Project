@@ -1,0 +1,171 @@
+{
+  "scope": "Analysis-only: no retraining, no inference. All numbers derived from pre-existing artifacts in /home/ybai/curriculum_rl_resubmit/.",
+  "peer_review": {
+    "venue": "ACL 2026 ARR January Cycle",
+    "submission_id": "4063 / 4068",
+    "decision": "REJECT",
+    "decision_date": "2026-04-06",
+    "ac_recommendation": "Findings (3.0)",
+    "sac_rating": "5 / Marginally below acceptance",
+    "reviewer_scores": {
+      "UZv7": 3.5,
+      "23fJ": 2.5,
+      "H3rv": 2.5
+    }
+  },
+  "main_table_headline_avg_4_ood": {
+    "graph_cot_qwen25_3b": {
+      "rougeL": 33.84,
+      "gpt4score": 36.11
+    },
+    "vanilla_rl_qwen25_3b": {
+      "rougeL": 38.49,
+      "gpt4score": 39.05
+    },
+    "curriculum_rl_qwen25_3b": {
+      "rougeL": 40.62,
+      "gpt4score": 42.25
+    },
+    "pure_e2h_qwen25_3b": {
+      "rougeL": 30.98,
+      "gpt4score": null
+    },
+    "graph_cot_qwen3_14b": {
+      "rougeL": 39.85,
+      "gpt4score": 42.01
+    }
+  },
+  "curriculum_gain_over_vanilla": {
+    "avg_rougeL": 2.1299999999999955,
+    "avg_gpt4score": 3.200000000000003,
+    "legal_hard_rougeL": 11.06,
+    "academic_medium_rougeL": 32.84,
+    "literature_hard_rougeL_DEGRADATION": -12.75
+  },
+  "reward_convergence": {
+    "curriculum_w2_mix_125": {
+      "final_train_mean": 0.4014,
+      "final_win_rate": 0.2598,
+      "val_em": 0.1741
+    },
+    "uniform_w1_opt_200": {
+      "final_train_mean": 0.46,
+      "final_win_rate": 0.2661,
+      "val_em": 0.1556
+    },
+    "uniform_w1_sweep_200": {
+      "final_train_mean": 0.457,
+      "final_win_rate": 0.2635,
+      "val_em": 0.1333
+    }
+  },
+  "trajectory_stats_by_difficulty": [
+    {
+      "model": "Qwen2.5-3B (base)",
+      "split": "Easy",
+      "avg_rounds": 3.11,
+      "nodes_per_round": 2.25,
+      "nc_pct": 14.4,
+      "loop_pct": 4.2
+    },
+    {
+      "model": "Qwen2.5-3B (base)",
+      "split": "Medium",
+      "avg_rounds": 5.5,
+      "nodes_per_round": 4.51,
+      "nc_pct": 24.1,
+      "loop_pct": 22.3
+    },
+    {
+      "model": "Qwen2.5-3B (base)",
+      "split": "Hard",
+      "avg_rounds": 6.98,
+      "nodes_per_round": 5.98,
+      "nc_pct": 46.3,
+      "loop_pct": 41.6
+    },
+    {
+      "model": "Vanilla PPO",
+      "split": "Easy",
+      "avg_rounds": 3.51,
+      "nodes_per_round": 3.54,
+      "nc_pct": 14.0,
+      "loop_pct": 6.1
+    },
+    {
+      "model": "Vanilla PPO",
+      "split": "Medium",
+      "avg_rounds": 5.17,
+      "nodes_per_round": 3.25,
+      "nc_pct": 33.9,
+      "loop_pct": 10.9
+    },
+    {
+      "model": "Vanilla PPO",
+      "split": "Hard",
+      "avg_rounds": 6.84,
+      "nodes_per_round": 66.98,
+      "nc_pct": 54.5,
+      "loop_pct": 22.7
+    },
+    {
+      "model": "Curriculum RL (ours)",
+      "split": "Easy",
+      "avg_rounds": 2.87,
+      "nodes_per_round": 2.9,
+      "nc_pct": 15.0,
+      "loop_pct": 1.8
+    },
+    {
+      "model": "Curriculum RL (ours)",
+      "split": "Medium",
+      "avg_rounds": 4.85,
+      "nodes_per_round": 3.8,
+      "nc_pct": 28.2,
+      "loop_pct": 6.9
+    },
+    {
+      "model": "Curriculum RL (ours)",
+      "split": "Hard",
+      "avg_rounds": 6.71,
+      "nodes_per_round": 30.85,
+      "nc_pct": 55.4,
+      "loop_pct": 25.2
+    }
+  ],
+  "evidence_grounded_accuracy": [
+    {
+      "model": "Qwen2.5-3B (base)",
+      "em_acc": 0.327,
+      "correct_and_eh": 0.283,
+      "wrong_and_eh": 0.122,
+      "correct_not_eh": 0.044,
+      "p_correct_given_eh": 0.698,
+      "p_correct_given_not_eh": 0.074
+    },
+    {
+      "model": "Vanilla PPO",
+      "em_acc": 0.345,
+      "correct_and_eh": 0.291,
+      "wrong_and_eh": 0.103,
+      "correct_not_eh": 0.054,
+      "p_correct_given_eh": 0.738,
+      "p_correct_given_not_eh": 0.089
+    },
+    {
+      "model": "Curriculum RL (ours)",
+      "em_acc": 0.357,
+      "correct_and_eh": 0.317,
+      "wrong_and_eh": 0.101,
+      "correct_not_eh": 0.04,
+      "p_correct_given_eh": 0.758,
+      "p_correct_given_not_eh": 0.069
+    }
+  ],
+  "full_metrics_long_path": "/home/ybai/CSCE676/handoff/rq3_graph_aware_rl/tables/full_metrics_long.csv",
+  "qualitative_trajectories_path": "/home/ybai/CSCE676/handoff/rq3_graph_aware_rl/tables/qualitative_trajectories.md",
+  "wall_clock_seconds": {
+    "aggregate_metrics": 0.0075681209564208984,
+    "training_logs": 0.0048673152923583984
+  }
+}

@@ -1,0 +1,4 @@
+model,em_acc,correct_and_eh,wrong_and_eh,correct_not_eh,p_correct_given_eh,p_correct_given_not_eh
+Qwen2.5-3B (base),0.327,0.283,0.122,0.044,0.698,0.074
+Vanilla PPO,0.345,0.291,0.103,0.054,0.738,0.089
+Curriculum RL (ours),0.357,0.317,0.101,0.04,0.758,0.069

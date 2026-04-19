@@ -1,0 +1,6 @@
+method,backbone,avg_rougeL,avg_gpt4score
+Graph-CoT (prompting),Qwen2.5-3B-Instruct,33.84,36.11
+"Vanilla RL (PPO, uniform sampler)",Qwen2.5-3B-Instruct,38.49,39.05
+"Curriculum RL (ours, biased-mixture)",Qwen2.5-3B-Instruct,40.62,42.25
+"Pure E2H (Gaussian only, ablation)",Qwen2.5-3B-Instruct,30.98,
+Graph-CoT (prompting),Qwen3-14B,39.85,42.01

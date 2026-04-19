@@ -1,0 +1,16 @@
+domain,method,easy,medium,hard,ood
+Academic,Graph-CoT,61.71,11.16,7.05,11.81
+Academic,Vanilla RL,56.51,22.2,18.12,17.64
+Academic,Curriculum RL (ours),67.52,55.04,20.33,18.2
+E-commerce,Graph-CoT,82.34,38.47,11.64,3.49
+E-commerce,Vanilla RL,82.03,47.31,12.41,4.77
+E-commerce,Curriculum RL (ours),84.96,52.26,16.23,4.9
+Literature,Graph-CoT,63.52,55.14,6.59,1.67
+Literature,Vanilla RL,65.8,55.44,15.28,1.96
+Literature,Curriculum RL (ours),68.22,48.22,2.53,4.58
+Healthcare,Graph-CoT,63.23,7.09,0.0,
+Healthcare,Vanilla RL,61.13,7.07,5.0,
+Healthcare,Curriculum RL (ours),64.27,14.01,0.0,
+Legal,Graph-CoT,52.93,9.04,4.39,4.29
+Legal,Vanilla RL,53.07,13.98,4.0,19.33
+Legal,Curriculum RL (ours),58.14,16.73,15.06,16.11

@@ -20,6 +20,11 @@ This repository contains the semester project for CSCE 676 (Data Mining and Anal
 - Motivation and feasibility analysis for each RQ
 - Methodological planning with timeline
 
+### Final Deliverable
+- `notebooks/final_deliverable.ipynb` — curated end-to-end story: motivation → RQ1 (text mining + clustering) → RQ2 (graph mining) → RQ3 (graph-aware curriculum RL) → headline findings → honest limitations.
+- `handoff/` — frozen experimental artefacts the notebook reads from (metrics JSONs, tables, figures, environment manifest, reproducibility notes). The notebook curates these artefacts; it does not re-run the full training pipeline.
+- Collaboration declaration (human collaborators, web sources, AI tools, full citations) is included at the top of the notebook per the course rubric.
+
 ## Candidate Datasets
 
 1. **GRBench**  
@@ -52,6 +57,8 @@ This repository contains the semester project for CSCE 676 (Data Mining and Anal
 
 - `notebooks/checkpoint1_dataset_selection.ipynb` — Checkpoint 1 notebook
 - `notebooks/checkpoint2_rq_formation.ipynb` — Checkpoint 2 notebook
+- `notebooks/final_deliverable.ipynb` — **Final deliverable**: end-to-end curated story across RQ1 / RQ2 / RQ3
+- `handoff/` — frozen experimental artefacts consumed by the final deliverable notebook (metrics, tables, figures, reproducibility notes)
 - `scripts/download_datasets.py` — one-command dataset downloader
 - `reports/figures/` — EDA and analysis figures
 - `data/raw/` — downloaded raw datasets (local use, not committed)

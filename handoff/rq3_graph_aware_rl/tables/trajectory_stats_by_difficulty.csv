@@ -1,0 +1,10 @@
+model,split,avg_rounds,nodes_per_round,nc_pct,loop_pct
+Qwen2.5-3B (base),Easy,3.11,2.25,14.4,4.2
+Qwen2.5-3B (base),Medium,5.5,4.51,24.1,22.3
+Qwen2.5-3B (base),Hard,6.98,5.98,46.3,41.6
+Vanilla PPO,Easy,3.51,3.54,14.0,6.1
+Vanilla PPO,Medium,5.17,3.25,33.9,10.9
+Vanilla PPO,Hard,6.84,66.98,54.5,22.7
+Curriculum RL (ours),Easy,2.87,2.9,15.0,1.8
+Curriculum RL (ours),Medium,4.85,3.8,28.2,6.9
+Curriculum RL (ours),Hard,6.71,30.85,55.4,25.2
