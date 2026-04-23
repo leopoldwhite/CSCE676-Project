@@ -1,0 +1,19 @@
+# CSCE 676 Final Deliverable — minimal runtime requirements
+#
+# main_notebook.ipynb only needs lightweight libraries to execute, since it reads
+# from frozen artefacts in handoff/ rather than re-running training/inference.
+#
+# Tested combination (Python 3.10–3.12). If you are running this in Google Colab,
+# all of the packages below are pre-installed at compatible versions, so a fresh
+# `pip install -r requirements.txt` is typically a no-op.
+
+pandas>=2.0,<3.0
+numpy>=1.24,<3.0
+matplotlib>=3.7,<4.0
+
+# For executing the notebook (already present in any Jupyter / Colab env)
+jupyter>=1.0
+nbformat>=5.7
+nbclient>=0.7
+nbconvert>=7.0
+ipykernel>=6.0
